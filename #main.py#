@@ -28,7 +28,7 @@ class MainHandler(webapp2.RequestHandler):cd
     def get(self):
         current_time = datetime.datetime.now()
         user = users.get_current_user()
-        login_url = users.create_login_url(self.request.path)
+        login_url cd= users.create_login_url(self.request.path)
         logout_url = users.create_logout_url(self.request.path)
         template = template_env.get_template('home.html')
         context =  {
